@@ -1,0 +1,32 @@
+@import "../../styles/Variables.scss";
+
+.job {
+  margin-bottom: 5rem;
+  a {
+    color: $color-white;
+  }
+  &__title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    span:last-of-type {
+      margin-left: 2rem;
+      transition: all 0.5s ease;
+    }
+  }
+  &:hover &__title span:last-of-type {
+    margin: 0;
+  }
+  &__desc {
+    line-height: 1.6;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  &__type {
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+}

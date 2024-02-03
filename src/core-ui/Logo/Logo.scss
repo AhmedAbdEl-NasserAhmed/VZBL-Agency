@@ -1,0 +1,9 @@
+@import "../../styles/Variables.scss";
+
+.logo {
+  font-size: 5rem;
+  font-weight: 900;
+  a {
+    color: $color-gray;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../styles/Variables.scss";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5rem;
+  height: 12rem;
+  background: $color-black;
+  color: $color-white;
+}

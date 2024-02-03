@@ -1,0 +1,91 @@
+@import "../../styles/Variables.scss";
+
+.home-page {
+  padding: 10rem 0 0 0;
+  background-color: $color-primary-dark;
+
+  &__video {
+    width: 95%;
+    margin: 30rem auto 10rem;
+    overflow: hidden;
+    height: 120vh;
+  }
+  &__about {
+    padding: 15rem 0;
+    height: 95vh;
+    user-select: none;
+    &-text {
+      font-size: 4rem;
+      text-align: center;
+      font-family: $font-secondary;
+      line-height: 1.5;
+      color: $color-white;
+      width: 70%;
+      margin: auto;
+    }
+  }
+  &__latest-work {
+  }
+  &__services {
+    height: 700vh;
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+.intro {
+  position: relative;
+  &__img {
+    width: 90rem;
+    height: 90rem;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  &__text {
+    position: relative;
+    z-index: 3;
+    transform: translateY(10rem);
+    font-family: $font-secondary;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    text-align: center;
+    font-size: 20rem;
+
+    color: $color-white;
+
+    &-wrapper {
+      position: relative;
+      height: 25rem;
+      overflow: hidden;
+      display: inline-block;
+      color: $color-gray-dark-2;
+    }
+
+    &--shadow-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+    }
+    &--shadow-layer {
+      width: 0;
+      z-index: 2;
+      color: $color-white;
+    }
+
+    &--tertiary {
+      text-transform: none;
+      transform: translateX(-7rem);
+    }
+    p:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}

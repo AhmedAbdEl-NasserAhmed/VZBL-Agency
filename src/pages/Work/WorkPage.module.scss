@@ -1,0 +1,96 @@
+@import "../../styles/Variables.scss";
+
+.work-page {
+  background-color: $color-primary-dark;
+  &__intro {
+    padding-block: 10rem;
+    padding-inline: 5rem;
+    &-txt {
+      overflow: hidden;
+    }
+    &-image {
+      height: 120vh;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-parag {
+      height: 100vh;
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      line-height: 1.7;
+    }
+  }
+}
+
+.works {
+  padding-inline: 1rem;
+  column-count: 3;
+  column-gap: 2rem;
+  padding-bottom: 15rem;
+  &__work {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 2rem;
+    break-inside: avoid;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    &:hover &-data {
+      bottom: 15%;
+      opacity: 1;
+    }
+
+    img {
+      grid-row: 1 / -1;
+      grid-column: 1;
+      transition: all 0.5s ease;
+      position: relative;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.2) rotate(4deg);
+        filter: blur(4px) grayscale(80%);
+      }
+    }
+
+    &-data {
+      position: absolute;
+      width: 95%;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5%;
+      text-align: center;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3rem;
+      color: $color-white;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+      user-select: none;
+      pointer-events: none;
+      h2 {
+        text-transform: uppercase;
+        font-size: 7rem;
+      }
+      p {
+        line-height: 1.7;
+        font-size: 2rem;
+        color: $color-gray;
+      }
+    }
+  }
+}

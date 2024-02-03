@@ -1,0 +1,25 @@
+@import "../../styles/Variables.scss";
+
+.career {
+  padding: 10rem 3rem;
+  background-color: $color-primary-dark;
+  &__intro {
+    &-images {
+      margin-top: -10rem;
+      height: 60vh;
+    }
+    &-img {
+      background: url("../../assets/career/career2.webp") 50% 40%;
+      background-repeat: repeat-x;
+      height: 100%;
+      filter: grayscale(1);
+    }
+  }
+}
+
+.jobs {
+  padding: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+  gap: 5rem;
+}

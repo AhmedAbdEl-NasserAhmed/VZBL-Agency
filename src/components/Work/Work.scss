@@ -1,0 +1,99 @@
+@import "../../styles/Variables.scss";
+
+.work {
+  display: flex;
+  font-size: 3rem;
+  min-height: 80vh;
+  &:first-child {
+    margin-top: 15rem;
+  }
+  &:not(:last-child) {
+    margin-bottom: 30rem;
+  }
+
+  &__image {
+    overflow: hidden;
+    height: 70vh;
+  }
+
+  &__img {
+  }
+
+  &__details {
+    &--wrapper {
+      display: flex;
+      flex-direction: column;
+      color: $color-white;
+      width: 80%;
+    }
+    & > * {
+      margin: 2rem 0;
+    }
+  }
+
+  &__title {
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+
+  &__description {
+    font-weight: 400;
+    line-height: 1.8;
+    font-size: 2.5rem;
+    color: $color-gray;
+    margin-bottom: 5rem;
+  }
+
+  &__view-btn {
+    margin-top: auto;
+    font-size: 2rem;
+  }
+
+  // ODD CASE OF WORK
+  .work-wrapper:nth-child(odd) & &__image {
+    width: 40%;
+  }
+
+  .work-wrapper:nth-child(odd) & &__details {
+    width: 60%;
+    text-align: right;
+  }
+
+  .work-wrapper:nth-child(odd) & &__details--wrapper {
+    margin-left: auto;
+  }
+
+  .work-wrapper:nth-child(odd) & &__title {
+    margin-left: auto;
+  }
+
+  .work-wrapper:nth-child(odd) & &__view-btn {
+    align-self: flex-end;
+  }
+
+  // EVEN CASE OF WORK
+  .work-wrapper:nth-child(even) & {
+    flex-direction: row-reverse;
+  }
+  .work-wrapper:nth-child(even) & &__image {
+    width: 40%;
+  }
+
+  .work-wrapper:nth-child(even) & &__details {
+    width: 60%;
+    text-align: left;
+  }
+
+  .work-wrapper:nth-child(odd) & &__details--wrapper {
+    margin-right: auto;
+  }
+
+  .work-wrapper:nth-child(even) & &__title {
+    margin-right: auto;
+  }
+
+  .work-wrapper:nth-child(even) & &__view-btn {
+    align-self: flex-start;
+  }
+}

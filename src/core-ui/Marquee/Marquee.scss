@@ -1,0 +1,15 @@
+@import "../../styles/Variables.scss";
+@import "../../styles/Animations.scss";
+
+.marquee {
+  display: flex;
+  gap: 10rem;
+  width: 1000vw; // set as default width to declare children real width
+  animation: marqueeMove 60s ease-in-out infinite;
+  overflow: hidden;
+  div {
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 28rem;
+  }
+}

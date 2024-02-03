@@ -1,0 +1,3 @@
+@mixin xAxisAnimationHelper($boundaries) {
+  transform: translateX($boundaries);
+}
